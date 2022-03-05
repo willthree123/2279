@@ -8,6 +8,13 @@
     --footer-font-color: #8F8F8F;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 1s;
+}
+
 body {
     background-color: var(--main-bg-color);
     color: #F3F3F3;
@@ -40,7 +47,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: max(12vh, 100px);
-    background: rgba(0, 0, 0, 0.44);
+    background-color: #0F232E70;
     box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(40px);
 }
@@ -191,6 +198,10 @@ a:hover {
     transform: scale(1.05);
 }
 
+.covid-link {
+    width: 100%;
+}
+
 .CovidBanner {
     display: flex;
     padding: 0px 0px;
@@ -200,7 +211,7 @@ a:hover {
     justify-content: center;
     position: relative;
     height: max(4vh, 50px);
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(228.38deg, #E1467C 25.56%, rgba(255, 119, 217, 0.62) 109.09%);
     box-shadow: 0px 11px 13px rgba(0, 0, 0, 0.25);
 }
@@ -221,7 +232,7 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     left: 0px;
     top: 0px;
     z-index: 99;
@@ -229,7 +240,7 @@ a:hover {
 
 .footer {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     background: var(--main-bg-color);
 }
@@ -366,34 +377,6 @@ a:hover {
     margin-bottom: 30px;
 }
 
-
-/* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .CovidBanner p {
-        font-size: 1.4em;
-    }
-    .footer-logo-vector {
-        width: min(30vw, 80%);
-    }
-    .footer-nav-btn p,
-    .footer-nav-btn a p {
-        font-size: 1.3em;
-        padding: 0 8px;
-    }
-    .footer-grey-text p {
-        color: var(--footer-font-color);
-        line-height: 1.2em;
-    }
-    .footer-grey-text {
-        padding: 0px 20px;
-        margin-bottom: 30px;
-    }
-}
-
 .toggle-button {
     position: absolute;
     /* top: .75rem; */
@@ -462,7 +445,6 @@ a:hover {
         padding: 0px 0px;
         flex-direction: column;
         z-index: 100;
-        background-color: #0F232E;
     }
     .toggle-button {
         display: flex;
@@ -475,15 +457,25 @@ a:hover {
     .nav-btns.active {
         display: flex;
         align-self: center;
-        background-color: #434852;
+        background-color: #304352;
         width: 100%;
+    }
+    .nav-logo {
+        margin-bottom: 2vh;
+    }
+    .footer-nav-btn a p {
+        font-size: 100%;
     }
 }
 
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 721px and up) */
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 721px) {
+    .footer-nav-btn a p {
+        font-size: 170%;
+    }
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
