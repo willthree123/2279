@@ -3,6 +3,7 @@
     --nav-btn-color: #AFAFB0;
     --title-font-color: #F3F3F3;
     --card-content-color: #D0D0D0;
+    --card-bg-color: #24272C;
     --icon-color: #D0D0D0;
     --footer-bg-color: #0F232E;
     --footer-font-color: #8F8F8F;
@@ -395,6 +396,28 @@ a:hover {
     width: 100%;
     background-color: white;
     border-radius: 1.5px;
+}
+
+.raised {
+    padding: 34px;
+    background: var(--card-bg-color);
+    box-shadow: -18px -18px 36px rgba(255, 255, 255, 0.05), 18px 18px 36px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.sunken {
+    padding: 34px;
+    background: var(--card-bg-color);
+    box-shadow: inset -18px -18px 36px rgba(255, 255, 255, 0.05), inset 18px 18px 36px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.spacer {
+    height: 0vh;
+}
+
+.top-spacer {
+    height: 25vh;
 }
 
 

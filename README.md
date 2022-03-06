@@ -2,6 +2,10 @@
  
 ## Assignment 1 
 
+### 1_2 [6/3/2022 18:46]
+
+- Finished Home page
+
 ### 1_1 [5/3/2022 16:36]
 
 - Update header footer
